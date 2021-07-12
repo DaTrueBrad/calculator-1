@@ -13,20 +13,21 @@ reader.question("What would you like to calculate?", function(input){
 	mathSymbol = tokens[0];
 	num1 = Number(tokens[1]);
 	num2 = Number(tokens[2]);
+	num3 = Number(tokens[3]);
 
 	if (mathSymbol === "+"){
-		console.log(num1 + num2);
+		console.log(num1 + num2 + num3);
 	}
 	if (mathSymbol === "-"){
-		console.log(num1 - num2);
+		console.log(num1 - num2 - num3);
 	}
 	if (mathSymbol === "*"){
-		console.log(num1 * num2);
+		console.log(num1 * num2 * num3);
 	}
 	if (mathSymbol === "/"){
-		console.log(num1 / num2);
+		console.log(num1 / num2 / num3);
 	}
-	if (mathSymbol === "squareRoot"){
+	if (mathSymbol === "sq"){
 		console.log(Math.sqrt(num1));
 	}
 	if (mathSymbol === "^2"){
@@ -35,14 +36,14 @@ reader.question("What would you like to calculate?", function(input){
 	if (mathSymbol === "^3"){
 		console.log(num1 * num1 * num1);
 	}
-	if (mathSymbol === "power"){
+	if (mathSymbol === "pwr"){
 		console.log(Math.pow(num1, num2));
 	}
-	if (mathSymbol === "remainder"){
+	if (mathSymbol === "rem"){
 		console.log(num1 % num2);
 	}
 
 	// This line closes the connection to the command line interface.
 	reader.close()
 
-});
+}); 
