@@ -15,32 +15,49 @@ reader.question("What would you like to calculate?", function(input){
 	num2 = Number(tokens[2]);
 	num3 = Number(tokens[3]);
 
-	if (mathSymbol === "+"){
-		console.log(num1 + num2 + num3);
+	if (tokens[3]) {
+		if (mathSymbol === "+"){
+			console.log(num1 + num2 + num3)
+		}
+		if (mathSymbol === "-"){
+			console.log(num1 - num2 - num3);
+		}
+		if (mathSymbol === "*"){
+			console.log(num1 * num2 * num3);
+		}
+		if (mathSymbol === "/"){
+			console.log(num1 / num2 / num3);
+		}
 	}
-	if (mathSymbol === "-"){
-		console.log(num1 - num2 - num3);
-	}
-	if (mathSymbol === "*"){
-		console.log(num1 * num2 * num3);
-	}
-	if (mathSymbol === "/"){
-		console.log(num1 / num2 / num3);
-	}
-	if (mathSymbol === "sq"){
-		console.log(Math.sqrt(num1));
-	}
-	if (mathSymbol === "^2"){
-		console.log(num1 * num1);
-	}
-	if (mathSymbol === "^3"){
-		console.log(num1 * num1 * num1);
-	}
-	if (mathSymbol === "pwr"){
-		console.log(Math.pow(num1, num2));
-	}
-	if (mathSymbol === "rem"){
-		console.log(num1 % num2);
+
+	if (tokens===[2]) {
+		if (mathSymbol === "+"){
+			console.log(num1 + num2);
+		}
+		if (mathSymbol === "-"){
+			console.log(num1 - num2);
+		}
+		if (mathSymbol === "*"){
+			console.log(num1 * num2);
+		}
+		if (mathSymbol === "/"){
+			console.log(num1 / num2);
+		}
+		if (mathSymbol === "sq"){
+			console.log(Math.sqrt(num1));
+		}
+		if (mathSymbol === "^2"){
+			console.log(num1 * num1);
+		}
+		if (mathSymbol === "^3"){
+			console.log(num1 * num1 * num1);
+		}
+		if (mathSymbol === "pwr"){
+			console.log(Math.pow(num1, num2));
+		}
+		if (mathSymbol === "rem"){
+			console.log(num1 % num2);
+		}
 	}
 
 	// This line closes the connection to the command line interface.
